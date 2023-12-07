@@ -16,6 +16,17 @@ Once you have the new firmware installed, you can ensure you have the latest fir
 |:--:|:--:|
 | Front | Back |
 
+## Badge Details
+The Model 2023 badge for OzSec was created by [Badge Pirates](https://www.badgepirates.com/).
+
+Hardware specs:
+- ES32-S3-WROOM-1
+- LED's
+- Battery
+- USB-C
+- Buttons
+- [Schematics](schematics/OzSec_Schematic.pdf)
+
 ## Installing Firmware with ESPWebTool
 
 To install this firmware to your badge you will need:
@@ -25,7 +36,7 @@ To install this firmware to your badge you will need:
 
 ### Flashing Process
 
-- Download the latest [firmware.bin](https://www.lightthebadge.com/ota/2023/firmware.bin) and [bootloader.bin](https://www.lightthebadge.com/ota/2023/bootloader.bin).
+- Download the latest [firmware.bin](firmware/firmware.bin) and [bootloader.bin](firmware/bootloader.bin).
 
 - Plug your badge into your computer with a USB-C cable.
 > Note that it must be a data USB-C cable, not a power only cable. If you don't see a COM port for your badge, and installing drivers doesn't help, try a different cable.
@@ -138,3 +149,5 @@ To reset the serial permissions:
 ## Tips
 - Pinch the USB-C port between your fingers while you plug or unplug the USB-C cable. This reduces the risk of breaking off the USB-C port from the board.
 - Be careful when toggling the power switch on the board as the switch can break.
+
+
