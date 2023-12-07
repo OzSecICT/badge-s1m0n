@@ -36,7 +36,7 @@ To install this firmware to your badge you will need:
 
 ### Flashing Process
 
-- Download the latest [firmware.bin](firmware/firmware.bin) and [bootloader.bin](firmware/bootloader.bin).
+- Download the latest [firmware.bin](https://github.com/OzSecICT/ozsec-s1m0n/raw/main/firmware/firmware.bin) and [bootloader.bin](https://github.com/OzSecICT/ozsec-s1m0n/raw/main/firmware/bootloader.bin).
 
 - Plug your badge into your computer with a USB-C cable.
 > Note that it must be a data USB-C cable, not a power only cable. If you don't see a COM port for your badge, and installing drivers doesn't help, try a different cable.
