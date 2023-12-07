@@ -20,7 +20,7 @@ Once you have the new firmware installed, you can ensure you have the latest fir
 The Model 2023 badge for OzSec was created by [Badge Pirates](https://www.badgepirates.com/).
 
 Hardware specs:
-- ES32-S3-WROOM-1
+- ESP32-S3-WROOM-1
 - LED's
 - Battery
 - USB-C
