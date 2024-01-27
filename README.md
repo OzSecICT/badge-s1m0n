@@ -1,42 +1,30 @@
-# OzSec Model 2023: S1M0N Badge
+# OzSec Model 2023 Badge (Version 2023.5)
 
-Welcome to the `OzSec Model 2023: S1M0N` badge firmware repo. Here you will find updated code for the OzSec 2023 badges.
+Welcome to the OzSec Model 2023 badge firmware repo. Here you will find updated code for the OzSec 2023 badges.
 
 This new firmware includes both the original functionality of the badge as seen at OzSec 2023, as well as new
-code that unlocks a new text based interaction with S1M0N, and code that makes this badge somewhat desirable during OzSec 2024!
+firmware that unlocks a new text based interaction with S1M0N, and code that makes this badge somewhat desirable during OzSec 2024!
 
-This latest firmware supports over the air updates via wifi. Make sure wifi is configured properly and the badge is connected to the Internet. You can configure wifi
-settings by interacting with the badge over the Serial Terminal (See below for instructions) and updating wifi settings within the OzSec codebases' menu system.
+We also now support Over-the-Air updates to the badge firmware, and the ability to choose which code to run, the original
+Model 2023 or the new Model 2023: S1M0N code.
 
-Switch between OzSec and S1M0N codebases by holding the RIGHT button on the back of the badge. 
-
-Once you have the new firmware installed, you can ensure you have the latest firmware by turning the badge on, configuring wifi, and then holding the BOOT button on the back of the badge to initiate an update.
 
 | <img src="images/front.jpg" alt="Front" width="250"> | <img src="images/back.jpg" alt="Back" width="250"> |
 |:--:|:--:|
 | Front | Back |
 
-## Badge Details
-The Model 2023 badge for OzSec was created by [Badge Pirates](https://www.badgepirates.com/).
-
-Hardware specs:
-- ES32-S3-WROOM-1
-- LED's
-- Battery
-- USB-C
-- Buttons
-- [Schematics](schematics/OzSec_Schematic.pdf)
+## Links
+- [Installing Firmware](#installing-firmware-with-espwebtool)
+- [Accessing Serial Console](#interacting-with-your-badge)
+- [Update WiFi Settings](#changing-wifi-credentials)
+- [Tips](#tips)
 
 ## Installing Firmware with ESPWebTool
 
-To install this firmware to your badge you will need:
-- OzSec Model 2023 badge
-- USB-C data cable
-- Chrome, Edge, or Opera
+The latest firmware supports over the air updates, as long as WiFi is configured properly and the badge is connected to the Internet.
+The original OzSec 2023 badge firmware did not get this feature in time for the conference.
 
-### Flashing Process
-
-- Download the latest [firmware.bin](https://github.com/OzSecICT/ozsec-s1m0n/raw/main/firmware/firmware.bin) and [bootloader.bin](https://github.com/OzSecICT/ozsec-s1m0n/raw/main/firmware/bootloader.bin).
+- Download the latest [firmware.bin](https://www.lightthebadge.com/ota/2023/firmware.bin) and [bootloader.bin](https://www.lightthebadge.com/ota/2023/bootloader.bin).
 
 - Plug your badge into your computer with a USB-C cable.
 > Note that it must be a data USB-C cable, not a power only cable. If you don't see a COM port for your badge, and installing drivers doesn't help, try a different cable.
@@ -146,8 +134,30 @@ To reset the serial permissions:
 
 - If needed, reset your badge by pressing the RESET button on the top right hand side of your badge.
 
+## Changing WiFi Credentials
+
+You will probably need to update the WiFi settings of your badge so that it connects to your local WiFi to get firmware updates over-the-air. 
+
+You can do this by connecting to the badge over the Serial console (See [Interacting With Your Badge](#interacting-with-your-badge) above) and switching to the `Model 2023` codebase by holding the RIGHT button while it is powered on.
+
+If you are connected to the serial console during this, you will see the messages change to:
+```
+Hold BOOT to start OTA firmware update.
+Hold RIGHT to switch to S1M0N codebase.
+
+Press enter to activate the serial console.
+```
+
+This means you are in the Model 2023 codebase.
+
+1. Press enter to bring up the serial interface. 
+2. Press enter to login to the main menu.
+3. Enter option 7 FIRMWARE OPTIONS
+4. Enter option 1 CONFIGURE WI-FI
+
+From here, change the SSID and repeat to change the Passphrase as needed. Exit the main menu, and power off and power on your badge. It should now be able to connect to the Internet via your WiFi network and you can press and hold the BOOT button to initiate a firmware update and check if a new firmware is available.
+
+
 ## Tips
 - Pinch the USB-C port between your fingers while you plug or unplug the USB-C cable. This reduces the risk of breaking off the USB-C port from the board.
 - Be careful when toggling the power switch on the board as the switch can break.
-
-
