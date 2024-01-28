@@ -24,7 +24,7 @@ Model 2023 or the new Model 2023: S1M0N code.
 The latest firmware supports over the air updates, as long as WiFi is configured properly and the badge is connected to the Internet.
 The original OzSec 2023 badge firmware did not get this feature in time for the conference.
 
-- Download the latest [firmware.bin](https://www.lightthebadge.com/ota/2023/firmware.bin) and [bootloader.bin](https://www.lightthebadge.com/ota/2023/bootloader.bin).
+- Download the latest [firmware.bin](firmware/firmware.bin) and [bootloader.bin](firmware/bootloader.bin).
 
 - Plug your badge into your computer with a USB-C cable.
 > Note that it must be a data USB-C cable, not a power only cable. If you don't see a COM port for your badge, and installing drivers doesn't help, try a different cable.
