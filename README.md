@@ -14,17 +14,23 @@ Model 2023 or the new Model 2023: S1M0N code.
 | Front | Back |
 
 ## Links
-- [Installing Firmware](#installing-firmware-with-espwebtool)
-- [Accessing Serial Console](#interacting-with-your-badge)
-- [Update WiFi Settings](#changing-wifi-credentials)
-- [Tips](#tips)
+- [OzSec Model 2023 Badge (Version 2023.5)](#ozsec-model-2023-badge-version-20235)
+  - [Links](#links)
+  - [Installing Firmware with ESPWebTool](#installing-firmware-with-espwebtool)
+    - [Troubleshooting ESPWebTool](#troubleshooting-espwebtool)
+  - [Interacting With Your Badge](#interacting-with-your-badge)
+  - [Changing WiFi Credentials](#changing-wifi-credentials)
+  - [Tips](#tips)
 
 ## Installing Firmware with ESPWebTool
 
 The latest firmware supports over the air updates, as long as WiFi is configured properly and the badge is connected to the Internet.
 The original OzSec 2023 badge firmware did not get this feature in time for the conference.
 
-- Download the latest [firmware.bin](firmware/firmware.bin) and [bootloader.bin](firmware/bootloader.bin).
+Download the following files: 
+- [bootloader.bin](firmware/bootloader.bin)
+- [partitions.bin](firmware/partitions.bin)
+- [firmware.bin](firmware/firmware.bin)
 
 - Plug your badge into your computer with a USB-C cable.
 > Note that it must be a data USB-C cable, not a power only cable. If you don't see a COM port for your badge, and installing drivers doesn't help, try a different cable.
@@ -59,15 +65,18 @@ The original OzSec 2023 badge firmware did not get this feature in time for the 
 </p>
 
 - Once the badge is connected, four file upload options will show up. 
+
+- Click the delete icon on the `E000` row, we only need the other three.
 <p align=center>
 <img src="images/espwebtool-4.png">
 </p>
 
-- Click the delete icon on the bottom two rows, we only need two of them.
+- Ensure the first row is `0` and browse to your `bootloader.bin`.
 
-- Enter `0` and browse to your `bootloader.bin` for the first option.
+- Ensure the second row is `8000` and browse to your `partitions.bin`.
 
-- Enter `10000` and browse to your `firmware.bin` for the second option.
+- Ensure the third row is `10000` and browse to your `firmware.bin`.
+
 <p align=center>
 <img src="images/espwebtool-5.png">
 </p>
