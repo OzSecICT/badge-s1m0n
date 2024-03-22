@@ -28,9 +28,9 @@ The latest firmware supports over the air updates, as long as WiFi is configured
 The original OzSec 2023 badge firmware did not get this feature in time for the conference.
 
 Download the following files: 
-- [bootloader.bin](firmware/bootloader.bin)
-- [partitions.bin](firmware/partitions.bin)
-- [firmware.bin](firmware/firmware.bin)
+- [bootloader.bin](https://github.com/OzSecICT/ozsec-s1m0n/raw/main/firmware/bootloader.bin)
+- [partitions.bin](https://github.com/OzSecICT/ozsec-s1m0n/raw/main/firmware/partitions.bin)
+- [firmware.bin](https://github.com/OzSecICT/ozsec-s1m0n/raw/main/firmware/firmware.bin)
 
 - Plug your badge into your computer with a USB-C cable.
 > Note that it must be a data USB-C cable, not a power only cable. If you don't see a COM port for your badge, and installing drivers doesn't help, try a different cable.
